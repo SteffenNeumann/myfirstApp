@@ -1,4 +1,8 @@
 /* Style inputs with type="text", type="email"and textareas */
+body{
+  background-color: #232332;
+}
+
 input[type=text], input[type=email], textarea {
   width: 100%; /* Full width */
   padding: 12px; /* Some padding */ 
@@ -12,7 +16,7 @@ input[type=text], input[type=email], textarea {
 
 /* Style the submit button with a specific background color etc */
 button[type=submit] {
-  background-color: #04AA6D;
+  background-color: #E55C45;
   color: white;
   font-size: 16px;
   padding: 8px 24px;
@@ -23,5 +27,5 @@ button[type=submit] {
 
 /* When moving the mouse over the submit button, add a darker green color */
 button[type=submit]:hover {
-  background-color: #45a049;
+  background-color: #E76C57;
 }
