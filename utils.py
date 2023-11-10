@@ -1,28 +1,24 @@
-# Copyright (c) Streamlit Inc. (2018-2022) Snowflake Inc. (2022)
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
+import streamlit as st  # pip install streamlit
 
-import inspect
-import textwrap
-
-import streamlit as st
+st.header(":mailbox: Get In Touch With Me!")
 
 
-def show_code(demo):
-    """Showing the code of the demo."""
-    show_code = st.sidebar.checkbox("Show code", True)
-    if show_code:
-        # Showing the code of the demo.
-        st.markdown("## Code")
-        sourcelines, _ = inspect.getsourcelines(demo)
-        st.code(textwrap.dedent("".join(sourcelines[1:])))
+contact_form = """
+<form action="https://formsubmit.co/interdesk24@gmail.com" method="POST">
+     <input type="hidden" name="_captcha" value="false">
+     <input type="text" name="name" placeholder="Your name" required>
+     <input type="email" name="email" placeholder="Your email" required>
+     <textarea name="message" placeholder="Your message here"></textarea>
+     <button type="submit">Send</button>
+</form>
+"""
+
+st.markdown(contact_form, unsafe_allow_html=True)
+
+# Use Local CSS File
+def local_css(file_name):
+    with open(file_name) as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
+
+local_css("style/style.css")
