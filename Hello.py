@@ -1,6 +1,5 @@
 import streamlit as st  # pip install streamlit
-from playwright.sync_api import sync_playwright
-import os
+from playwright.sync_api import sync_playwright  # type: ignoreimport os
 from geopy.geocoders import Nominatim
 from datetime import datetime
 import smtplib
@@ -9,6 +8,8 @@ from email.mime.multipart import MIMEMultipart
 from dotenv import load_dotenv
 from dataclasses import dataclass
 import sqlite3
+import os
+
 
 geolocator = Nominatim(user_agent="my_user_agent")
 city = "Erding"
